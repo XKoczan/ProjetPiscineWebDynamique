@@ -11,11 +11,12 @@
     echo '<p>Server '.$mysqli->server_info.'</p>';
     
 $query = "SELECT * FROM catalogue WHERE categorie LIKE 'vetement'";
-// "SELECT * FROM membre ORDER BY Id"
-// "SELECT * FROM membre WHERE DateNaissance <'1960-01-01'"
-// "SELECT * FROM membre WHERE Prenom like 'G%'"
-// "SELECT * FROM membre WHERE Prenom like '%MA%'"
-//   $query = "SELECT * FROM membre WHERE Prenom like '%MA%'";
+$array=array();
+$comp=array();
+$compteur = 0;
+
+
+
 
  
 if ($result = $mysqli->query($query)) {
@@ -33,10 +34,13 @@ if ($result = $mysqli->query($query)) {
         $field9name = isset($row["vidéo"])?$row["vidéo"]: "";
         $field10name = $row["description"];
         
-        echo '
-        <div>
-            
-        <tr> 
+         foreach($row as $key => $value)
+        {
+            $comp[$compteur]=$value;
+        }
+        
+        echo ("<html>
+                <tr> 
                                     
                   <td><img src='.$field8name.' ></td><br>
                   <h6><td>'.$field2name.'</td><br>
@@ -46,22 +50,23 @@ if ($result = $mysqli->query($query)) {
                   <td>Prix:'.$field7name.'€</td><br>
                   <td>Fournisseur: '.$field3name.'</td><br>
                   <td>Description: '.$field10name.'</td></h6><br>
+                  <td>Compteur :'.$compteur.'</td><br>;
                   
+                  <td><a href='\article.php?id=".$row["idprod"]."'>Fiche de l'objet</a></td><br>
               </tr>
               
-  
-                
-                
-              <input type="button" name="button" value ="ACHETER MAINTENANT" onclick="myFunction()">
+              </html>");
       
-              
-        
-        </div>';
 
     }
+    
    
     /* free result set */
     $result->free();
 }
 
+
+
+
 ?>
+
