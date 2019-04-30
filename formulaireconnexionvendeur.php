@@ -21,7 +21,7 @@ if(isset($_POST['Connexion'])){
     else{
         $login=htmlspecialchars($_POST['login']);
         $password=htmlspecialchars($_POST['password']);
-        $sql = "SELECT idadmin, pseudo, sel, password FROM admin WHERE pseudo='".$login."'";
+        $sql = "SELECT idvendeur, pseudo, sel, password FROM vendeur WHERE pseudo='".$login."'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
@@ -30,7 +30,7 @@ if(isset($_POST['Connexion'])){
             $password=hash('sha3-256',$password.$row['sel']);
             if($password==$row["password"])
             {
-                $_SESSION['id']=$row["idadmin"];
+                $_SESSION['id']=$row["idvendeur"];
                 header("Location:http://www.localhost/pageadmin.php");
             }
             else
