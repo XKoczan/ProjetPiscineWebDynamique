@@ -7,47 +7,75 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <title>ECE Amazon</title>
+        <link rel="icon" href="ECE-Paris.ico" />
+        <link rel="stylesheet" href="ProjetPiscine.css">
     </head>
     
     <body>
-        
-        <nav class="navbar navbar-expand-md">
-        <img src="ECE-Paris.jpg" width= 25% height= 25%>
-         <div class="collapse navbar-collapse" id="main-navigation">
-             
-             <ul class="navbar-nav">
-                 
-                <li class="dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories<span lass="caret"></span></a>
-                    
-                    <ul class="dropdown-menu">
-                      <li><a href="Livres.html" title="Livres">Livres</a></li>
-                      <li><a href="Musique.html" title="Musique">Musique</a></li>
-                      <li><a href="Vetements.html" title="Vetements">Vêtements</a></li>
-                      <li><a href="Sport_loisirs.html" title="Sports_loisirs">Sports et Loisirs</a></li>
-                    </ul>
-                 </li>
-                 
-                 <li class="dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ventes flash<span lass="caret"></span></a>
-                    
-                    <ul class="dropdown-menu">
-                        Best sellers
-                      <li><a href="Livres.html" title="Livres">Livres</a></li>
-                      <li><a href="Musique.html" title="Musique">Musique</a></li>
-                      <li><a href="Vetements.html" title="Vetements">Vêtements</a></li>
-                      <li><a href="Sport_loisirs.html" title="Sports_loisirs">Sports et Loisirs</a></li>
-                    </ul>
-                 </li>                 
-                 
-                 <li class="nav-item"><a class="nav-link" href="Vendre.html">Vendre</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Votre_compte.html">Votre compte</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Panier.html">Panier</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Admin.html">Admin</a></li>
-             </ul>
-         </div>
-    </nav>
+        <header>
+            <img id="logo" src="ECE-Paris.jpg" width= 25% height= 25%>
+            <nav class="navbar navbar-expand-md">
+
+                 <div class="collapse navbar-collapse row"  id="navi">
+
+                     <ul class="navbar-nav">
+
+                        <li class="dropdown col-lg-2" id="navielem"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories<span lass="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                              <li><a href="Livres.html" title="Livres">Livres</a></li>
+                              <li><a href="Musique.html" title="Musique">Musique</a></li>
+                              <li><a href="Vetements.html" title="Vetements">Vêtements</a></li>
+                              <li><a href="Sport_loisirs.html" title="Sports_loisirs">Sports et Loisirs</a></li>
+                            </ul>
+                         </li>
+
+                         <li class="dropdown col-lg-2" id="navielem"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ventes flash<span lass="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                Best sellers
+                              <li><a href="Livres.html" title="Livres">Livres</a></li>
+                              <li><a href="Musique.html" title="Musique">Musique</a></li>
+                              <li><a href="Vetements.html" title="Vetements">Vêtements</a></li>
+                              <li><a href="Sport_loisirs.html" title="Sports_loisirs">Sports et Loisirs</a></li>
+                            </ul>
+                         </li>                 
+
+                         <li class="nav-item col-lg-2" id="navielem"><a class="nav-link" href="Vendre.html">Vendre</a></li>
+                         <li class="nav-item col-lg-2" id="navielem"><a class="nav-link" href="Votre_compte.html">Votre compte</a></li>
+                         <li class="nav-item col-lg-2" id="navielem"><a class="nav-link" href="Panier.html">Panier</a></li>
+                         <li class="nav-item col-lg-2" id="navielem"><a class="nav-link" href="Admin.html">Admin</a></li>
+                     </ul>
+                 </div>
+            </nav>
+        </header>  
         
         <footer>
-        Fast engineering developement studio There Xavier Jean and Guillaume
+            <div id="adresse">37 Quai de Grenelle, 75015 Paris</div>
+            <div id="ecole">ECE Paris 1919</div>
+            <div id="annee">Copyright 2019</div>
+            
+            <div class="row" id="hyperlien">
+                <a href="#" class="col-lg-2" id="contact">Nous Contacter!</a>
+                <a href="#" class="col-lg-2" id="suivre">Nous Suivre!</a>
+                <a href="#" class="col-lg-2" id="faq">FAQ</a>
+            </div>
+            
+            <div class="row" id="equipe">
+                <div  class="col-lg-3">
+                    <img src="Xavier.jpg" class="rounded-circle" >
+                    <p>Xavier Koczan</p>
+                </div>
+                <div  class="col-lg-3">
+                    <img src="Jean.jpg" class="rounded-circle" >
+                    <p>Jean Prouvost Filippini</p>
+                </div>
+                    <div  class="col-lg-3">
+                    <img src="Guillaume.JPG" class="rounded-circle" >
+                <p>Guillaume Le Loher</p>
+                </div>
+            </div>
+            
         </footer>
         
     </body>
