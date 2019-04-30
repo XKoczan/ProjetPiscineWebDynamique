@@ -20,11 +20,39 @@
 
 #hyperlien{
     margin-left: 2em;
-}
-#equipe{
-float: right;
     
 }
 #equipe{
-  resize: both;
+float: right;
+    margin-left: 15em;
+
+    
+}
+#equipier{
+    padding: 1em;
+  
+}
+.page-footer {
+ background-color: #222;
+ color: #ccc;
+ padding-bottom: 285px;
+ margin-bottom: auto;
+ position: absolute;
+ width: 100%; height: 30px;
+ bottom: 0; left: 0; right: 0;
+}
+
+#description{
+    margin-left: 3em;
+}
+#contact{
+    padding: 2em;
+}
+
+#suivre{
+    padding: 2em;
+}
+
+#faq{
+    padding: 2em;
 }
