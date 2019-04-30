@@ -1,0 +1,21 @@
+#navi{background-color: aquamarine;
+    padding-left: 8em;
+    border-bottom-style:solid;
+    
+    
+}
+
+#navielem{
+    
+    margin-right: 1em;
+    margin-left: 1em;
+    align-content: center;
+}
+
+#logo{
+    
+    border-bottom-style: inset;
+}
+
+footer{
+margin-left: 15em;}
