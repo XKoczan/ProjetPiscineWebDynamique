@@ -31,7 +31,7 @@ if(isset($_POST['Connexion'])){
             if($password==$row["password"])
             {
                 $_SESSION['id']=$row["idvendeur"];
-                header("Location:http://www.localhost/pageadmin.php");
+                header("Location:http://www.localhost/pagevendeur.php");
             }
             else
             {
