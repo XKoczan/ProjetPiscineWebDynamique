@@ -1,0 +1,25 @@
+SOURCES 
+Supprimer le lien de redirection
+https://stackoverflow.com/questions/26071180/stop-page-redirecting-to-php-script-file-when-submitting-form
+
+Supprimer un élément dans une Session
+https://www.developpez.net/forums/d760854/php/langage/suppression-d-element-tableau-session/
+
+Utiliser les Sessions
+https://www.w3schools.com/php/php_sessions.asp
+
+Afficher les variables de la Session
+https://openclassrooms.com/forum/sujet/affichage-variable-session
+
+PDO et ses fonctions:
+https://php.net/manual/fr/ref.pdo-mysql.php
+
+Retourner une ligne d'un tableau fetch en tant qu'objet
+https://www.php.net/manual/fr/pdostatement.fetchobject.php
+
+Retourner un tableau à partir d'une query sql
+https://www.php.net/manual/fr/pdostatement.fetchall.php
+
+Erreurs et Gestion des erreurs
+https://www.php.net/manual/fr/pdo.error-handling.php
+
