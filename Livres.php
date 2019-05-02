@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$_SESSION["newsession"];
 
     $mysqli = new mysqli('127.0.0.1', 'root', '','ecesales');
     $query="";
@@ -11,13 +12,6 @@
     echo '<p>Server '.$mysqli->server_info.'</p>';
     
 $query = "SELECT * FROM catalogue WHERE categorie LIKE 'vetement'";
-$array=array();
-$comp=array();
-$compteur = 0;
-
-
-
-
  
 if ($result = $mysqli->query($query)) {
  
@@ -34,23 +28,17 @@ if ($result = $mysqli->query($query)) {
         $field9name = isset($row["vidéo"])?$row["vidéo"]: "";
         $field10name = $row["description"];
         
-         foreach($row as $key => $value)
-        {
-            $comp[$compteur]=$value;
-        }
-        
         echo ("<html>
                 <tr> 
                                     
-                  <td><img src='.$field8name.' ></td><br>
-                  <h6><td>'.$field2name.'</td><br>
-                  <td>Couleur: '.$field5name.'</td><br> 
-                  <td>Taille:'.$field6name.'</td><br>
+                  <td><img src=$field8name ></td><br>
+                  <h6><td>$field2name</td><br>
+                  <td>Couleur: $field5name</td><br> 
+                  <td>Taille:$field6name</td><br>
                    
-                  <td>Prix:'.$field7name.'€</td><br>
-                  <td>Fournisseur: '.$field3name.'</td><br>
-                  <td>Description: '.$field10name.'</td></h6><br>
-                  <td>Compteur :'.$compteur.'</td><br>;
+                  <td>Prix:".$field7name. "€</td><br>
+                  <td>Fournisseur: $field3name</td><br>
+                  <td>Description: $field10name</td></h6><br>
                   
                   <td><a href='\article.php?id=".$row["idprod"]."'>Fiche de l'objet</a></td><br>
               </tr>
