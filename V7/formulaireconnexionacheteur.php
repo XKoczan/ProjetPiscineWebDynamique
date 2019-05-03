@@ -76,7 +76,7 @@ mysqli_close($conn);
             <td><input type="submit" champ="valider" name="Connexion"></td>
         </tr>
     </table>
-<a id="creercompte" href="formulaireacheteur">Pas de compte? Inscrivez-vous.</a>
+<a id="creercompte" href="Formulaire-acheteur.php">Pas de compte? Inscrivez-vous.</a>
 </form>
 </body>
 </html>
