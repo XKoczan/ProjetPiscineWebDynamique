@@ -11,7 +11,9 @@ if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
 if(isset($_POST['test'])){
-    $nbvariantes=$_POST['variante'];
+    if($_POST['varianteclicked']=="true" && $_POST['modeleclicked']=="true"){
+
+    $nbvariantes=(int) $_POST['variantenb'];
     $variante="";
     $nbphoto=$_POST['nbphoto'];
     $canreturn=true;
@@ -45,7 +47,7 @@ if(isset($_POST['test'])){
             VALUES ('".$_POST['Nom']."', '".$_SESSION['id']."', '".$_POST['Categorie']."', '".$variante."')";
         }
     }
-    $nbmodele=$_POST['nbmodele'];
+    $nbmodele=(int) $_POST['modelenb'];
     if (mysqli_query($conn, $sql)) {
     } else {
         echo "il y a eu une erreur lors de l'ajout de l'article";
@@ -168,6 +170,9 @@ if(isset($_POST['test'])){
             header("Location:http://www.localhost/pagevendeur.php");
         }
     }
+}else{
+    echo"<span>vous devez appuyer sur les deux autres boutons d'abord</span>";
+}
 }
 ?>
 <html>
@@ -182,6 +187,12 @@ if(isset($_POST['test'])){
                 function addvariante(){
                     // Number of inputs to create
                     var number = document.getElementById("variante").value;
+                    //on stock que le bouton a été clické
+                    var is_clicked = document.getElementById("varianteclicked");
+                    is_clicked.value="true";
+                    //on stock le nombre rentré dans une variable caché pour que l'utilisateur ne puisse pas casser le code
+                    var nbvariante = document.getElementById("variantenb");
+                    nbvariante.value = number.toString();
                     // Container <div> where dynamic content will be placed
                     var container = document.getElementById("container");
                     // Clear previous contents of the container
@@ -209,6 +220,14 @@ if(isset($_POST['test'])){
                 function addmodele(){
                     // Number of inputs to create
                     var number = document.getElementById("modele").value;
+
+                    //on stock que le bouton a été clické
+                    var is_clicked = document.getElementById("modeleclicked");
+                    is_clicked.value="true";
+                    //on stock le nombre rentré dans une variable caché pour que l'utilisateur ne puisse pas casser le code
+                    var nbvariante = document.getElementById("modelenb");
+                    nbvariante.value = number.toString();
+
                     // Container <div> where dynamic content will be placed
                     var container = document.getElementById("modeleconteneur");
                     // Clear previous contents of the container
@@ -355,12 +374,12 @@ if(isset($_POST['test'])){
                 </div>
                 <div class="form-group"> 
                     Nombre de variantes:
-                    <input type="number" class="form-control" name="variante" class="champ" id="variante" placeholder="0 si pas de variante" ><a href="#" id="boutonvariante" onclick="addvariante()">Définir</a><br>
+                    <input type="number" class="form-control" name="variante" class="champ" id="variante" placeholder="0 si pas de variante" ><input type="button" name="variablebutton"value="Définir nombre de variantes" onclick="addvariante()"/><input type="hidden" id="varianteclicked" name="varianteclicked"value="false"><input type="hidden" id="variantenb" name="variantenb" value=""><br>
                 </div>
                 <div id="container" ></div>
                 <div class="form-group"> 
                     Nombre de modèles:
-                    <input type="number" class="form-control" name="nbmodele" class="champ" id="modele" placeholder="Entrez votre nombre de modèle" ><a href="#" id="boutonmodele" onclick="addmodele()">Définir</a><br>
+                    <input type="number" class="form-control" name="nbmodele" class="champ" id="modele" placeholder="Entrez votre nombre de modèle" ><input type="button" name="modelebutton" value="Définir nombre de modèles" onclick="addmodele()"/><input type="hidden" id="modeleclicked" name="modeleclicked" value="false"><input type="hidden" id="modelenb" name="modelenb" value=""><br>
                 </div>
                 <div id="modeleconteneur"></div>
                 <input type="submit" name="test" id="bouton" value="Mettre en vente">
