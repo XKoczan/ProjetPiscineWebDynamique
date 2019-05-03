@@ -30,6 +30,7 @@ if(isset($_POST['Connexion'])){
             $password=hash('sha3-256',$password.$row['sel']);
             if($password==$row["password"])
             {
+                unset($_POST['Connexion']);
                 $_SESSION['id']=$row["idvendeur"];
                 header("Location:http://www.localhost/pagevendeur.php");
             }

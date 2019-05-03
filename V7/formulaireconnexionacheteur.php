@@ -33,11 +33,11 @@ if(isset($_POST['Connexion'])){
                 $_SESSION['id']=$row["idacheteur"];
                 if($_GET['origine']=="header")
                 {
-                    
+                    unset($_POST['Connexion']);
                     header("Location:http://www.localhost/moncompte.php");
                 }
                 else{
-                    header("Location:http://www.localhost/formulairepanier.php");
+                    header("Location:http://www.localhost/Formulaire-panier.html");
                 }
             }
             else
