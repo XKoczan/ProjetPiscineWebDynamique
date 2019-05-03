@@ -9,8 +9,13 @@ if(isset($_GET['id'])){
     $qry->execute($data);
     $result=$qry->fetchAll(PDO::FETCH_OBJ);  
     
-    
-    $_SESSION['panier'][$result[0]->idprod]=1;  
+    if(!isset($_SESSION['panier'][$result[0]->idprod]))
+    {
+        $_SESSION['panier'][$result[0]->idprod]=1;    
+    }else{
+         $_SESSION['panier'][$result[0]->idprod]=$_SESSION['panier'][$result[0]->idprod]+1;
+    }
+      
     die("Le produit a bien ete ajoute <a href='getdata.php'>retour au catalogue</a>");
     
 }else{

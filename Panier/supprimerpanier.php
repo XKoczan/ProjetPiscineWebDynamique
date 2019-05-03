@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
             break;
         }
     }
-    die("Le produit a bien ete ajoute <a href='panier.php'>retour au catalogue</a>");
+    die("Le produit a bien ete supprime <a href='panier.php'>retour au panier</a>");
     
 }else{
     die("aucun produit selectionne");

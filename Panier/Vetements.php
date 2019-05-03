@@ -1,18 +1,23 @@
 <?php
 
   require 'init.var.php';
-    $req="SELECT * FROM catalogue WHERE categorie LIKE 'livre'";
+    $req="SELECT * FROM catalogue WHERE categorie LIKE 'vetement'";
     $qry = $db->prepare($req);
     $qry->execute();
     $items=$qry->fetchAll(PDO::FETCH_OBJ);
     
 echo("<header>
-        <h1>Catalogue
+        <h1>Vetements
             <div class='pagepanier'>
                 <a href='panier.php'><img src='panier.jpg' style='height:100%; width:100%;'></a>
             </div>
+            
         </h1>
+        <div class='logoece'>
+                <a href='ProjetPiscine.html'><img id='logo' src='ECE-Paris.jpg' width= 20% height= 20%></a>
+            </div>
     </header>");
+
     foreach($items as $item)
     {
         echo ("

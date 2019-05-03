@@ -5,13 +5,18 @@
     $qry = $db->prepare($req);
     $qry->execute();
     $items=$qry->fetchAll(PDO::FETCH_OBJ);
-    
+
+echo('<a href="ProjetPiscine.html"><img id="logo" src="ECE-Paris.jpg" width= 20% height= 20%></a>');
 echo("<header>
-        <h1>Catalogue
+        <h1>Livres
             <div class='pagepanier'>
                 <a href='panier.php'><img src='panier.jpg' style='height:100%; width:100%;'></a>
             </div>
+           
         </h1>
+         <div class='logoece'>
+                <a href='ProjetPiscine.html'><img id='logo' src='ECE-Paris.jpg' width= 20% height= 20%></a>
+            </div>
     </header>");
     foreach($items as $item)
     {
