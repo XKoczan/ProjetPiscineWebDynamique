@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="Formulaire-panier.css">
+        <link rel="icon" href="ECE-Paris.ico" />
+        <title>ECE Amazon Formulaire de vente</title>
+    </head>
+    
+    <body>
+        <header>
+                <a href="ProjetPiscine.html"><img id="logo" src="ECE-Paris.jpg" width= 20% height= 20%></a>
+        </header>
+        <h1>Formulaire de vente:</h1>
+        <h3>Compléter le formulaire afin de mettre en vente votre article:</h3>
+        
+            <form action="Vendre.php" method="post" class="needs-validation">
+                
+                <div class="form-group"> 
+                    Nom de l'auteur / créateur:
+                    <input type="text" class="form-control" name="Nom" id="champ" placeholder="Entrer Nom" required><br>
+                </div>
+                <div class="form-group"> 
+                    Nom fournisseur:
+                    <input type="text" class="form-control" name="Fournisseur" id="champ" placeholder="Entrer Nom" required><br>
+                </div>
+                
+                <div class="form-group">
+                    Catégorie
+                    <Select name="Categorie" size="1">
+                            <OPTION>Livres</OPTION>
+                            <OPTION>Musique</OPTION>
+                            <OPTION>Vetements</OPTION>
+                            <OPTION>Loisirs et sports</OPTION>
+                        </Select>
+                    <br>
+                </div>
+                <div class="form-group"> 
+                    Couleur:
+                    <input type="text" class="form-control" name="Couleur" id="champ" placeholder="Entrer Couleur" ><br>
+                </div>
+                <div class="form-group"> 
+                    Taille:
+                    <input type="text" class="form-control" name="Taille" id="champ" placeholder="Entrer Taille" ><br>
+                </div>
+              <div class="form-group"> 
+                    Prix:
+                    <input type="number" class="form-control" name="Prix" id="champ" placeholder="Entrer Prix" required><br>
+                </div>
+                <div class="form-group"> 
+                    Photo:
+                    <input type="text" class="form-control" name="Photo" id="champ" placeholder="Entrer le Nom de la photo" required><br>
+                </div>
+                <div class="form-group"> 
+                    Image:
+                    <input type="file" class="form-control" name="Image" id="champ" Value="Télécharger photo" required><br>
+                </div>
+                <div class="form-group"> 
+                    Vidéo:
+                    <input type="file" class="form-control" name="Video" id="champ" Value="Télécharger vidéo" ><br>
+                </div>
+                <div class="form-group"> 
+                    Description:
+                    <input type="text" class="form-control" name="Description" id="champ" placeholder="Télécharger photo" required><br>
+                </div>
+                
+                    <input type="submit" name="Soumettre" id="bouton" value="Mettre en vente">
+            </form>
+    </body>
+</html>
