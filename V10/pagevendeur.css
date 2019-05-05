@@ -1,0 +1,32 @@
+#nom{
+    background-color : whitesmoke;
+    text-align : center;
+    margin-left: 40%;
+    width:20%;
+}
+#profilepicture{
+    display:block;
+    margin-left : auto;
+    margin-right : auto;
+}
+#titre{
+    text-align: center;
+    background-color: whitesmoke;
+    width:20%;
+    margin-left: 40%;
+}
+#modifier{
+    margin-left: 37.5%;
+    background-color: whitesmoke;
+}
+#ajouter{
+    margin-left: 12.5%;
+    background-color: whitesmoke;
+}
+#supprimer{
+    margin-left: 45%;
+    background-color: whitesmoke;
+}
+.a{
+    font-size:20;
+}

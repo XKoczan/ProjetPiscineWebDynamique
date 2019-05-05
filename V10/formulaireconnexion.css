@@ -1,0 +1,20 @@
+#connexion{
+ 
+  border-style: dotted;
+    margin-left: 10em;
+    margin-top: 5em;
+    width: 25em;
+    height: 20em;
+}
+.valider{
+    
+    background-color: blueviolet;
+    text-decoration-color: brown;
+    margin-top: 2em;
+    margin-left: 5em;
+}
+.champ{
+    border-color: antiquewhite;
+    margin: 1em;
+    margin-left: 1em;
+}
