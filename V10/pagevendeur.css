@@ -1,0 +1,24 @@
+
+.pagevendeur{
+    height:275px;
+    width:300px;
+    background-color: #fde0d3;
+}
+#nom{
+    text-align : center;
+}
+#profilepicture{
+    display:block;
+    margin-left : auto;
+    margin-right : auto;
+}
+#titre{
+    text-align: center;
+    font-size: 2rem;
+}
+#modifier{
+    text-align: center;
+}
+.a{
+    font-size:20;
+}
