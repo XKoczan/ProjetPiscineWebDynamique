@@ -1,0 +1,24 @@
+#logo{
+    
+    border-bottom-style: inset;
+}
+
+#champ{
+    width: 50%;
+    align-content: center;
+}
+
+#bouton{
+    margin-left: 10em;
+    margin-bottom: 1em;
+    background-color: brown;
+}
+
+.form-group{
+    padding-left: 3em;
+}
+#section{
+    padding-left: 3em;
+    padding-top: 2em;
+    border-bottom-style: outset;
+}
